@@ -2071,19 +2071,67 @@ footer {
   }
 }
 
+/* Base Hamburger & Mobile Utility styles (hidden on desktop) */
+.nav-toggle-checkbox {
+  display: none !important;
+}
+.mobile-menu-btn {
+  display: none;
+}
+.mobile-only {
+  display: none !important;
+}
+
 /* Phone Mockup Small Devices Scaling */
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .phone-mockup {
-    transform: scale(0.85);
+    width: 350px !important;
+    transform: scale(0.9) !important;
     transform-origin: center top;
-    margin-bottom: -90px;
+    margin-bottom: -60px !important;
+  }
+}
+@media (max-width: 360px) {
+  .phone-mockup {
+    width: 350px !important;
+    transform: scale(0.82) !important;
+    transform-origin: center top;
+    margin-bottom: -110px !important;
   }
 }
 @media (max-width: 330px) {
   .phone-mockup {
-    transform: scale(0.75);
+    width: 350px !important;
+    transform: scale(0.72) !important;
     transform-origin: center top;
-    margin-bottom: -150px;
+    margin-bottom: -170px !important;
+  }
+}
+
+/* Global Mobile Overrides */
+@media (max-width: 900px) {
+  .logo-item {
+    border: none !important;
+  }
+  .cs-global-metric {
+    border: none !important;
+    padding: 12px 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .w {
+    padding: 0 16px !important;
+  }
+  .pr-toggles {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .prob-stats, .met-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 

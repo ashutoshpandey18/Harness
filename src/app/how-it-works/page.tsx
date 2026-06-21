@@ -258,6 +258,11 @@ export default function HowItWorksPage() {
             <li><Link href="/case-studies">Case Studies</Link></li>
             <li><Link href="/pricing">Pricing</Link></li>
             <li><Link href="/#product">Product</Link></li>
+            <li className="mobile-only" style={{ marginTop: "12px", borderTop: "0.5px solid var(--border)", paddingTop: "16px" }}>
+              <Link href="/dashboard" className="btn-p" style={{ width: "100%", justifyContent: "center" }}>
+                Admin Dashboard
+              </Link>
+            </li>
           </ul>
           <div className="nav-actions">
             <button onClick={toggleTheme} className="btn-icon" aria-label="Toggle theme" style={{ padding: "8px", display: "flex", alignItems: "center" }}>

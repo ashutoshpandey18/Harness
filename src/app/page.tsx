@@ -415,6 +415,11 @@ export default function LandingPage() {
               if (el) el.checked = false;
             }}>Product</a></li>
             <li><Link href="/pricing">Pricing</Link></li>
+            <li className="mobile-only" style={{ marginTop: "12px", borderTop: "0.5px solid var(--border)", paddingTop: "16px" }}>
+              <Link href="/dashboard" className="btn-p" style={{ width: "100%", justifyContent: "center" }}>
+                Admin Dashboard
+              </Link>
+            </li>
           </ul>
           <div className="nav-actions">
             <button onClick={toggleTheme} className="btn-icon" aria-label="Toggle theme" style={{ padding: "8px", display: "flex", alignItems: "center" }}>
@@ -1801,9 +1806,18 @@ export default function LandingPage() {
           .met-block { padding: 0; border: none; }
           .fcta-h2 { font-size: 28px; }
           .lp-h1 .h1-bold { font-size: 52px; }
-          .hero-stats-row { flex-wrap: wrap; }
+          .hs-div { display: none !important; }
+          .hero-stats-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
           .fcta-trust { flex-direction: column; gap: 8px; }
-          .uc-tabs { flex-direction: column; }
+          .uc-tabs {
+            flex-direction: row !important;
+            overflow-x: auto !important;
+            white-space: nowrap !important;
+            scrollbar-width: none !important;
+          }
+          .uc-tabs::-webkit-scrollbar {
+            display: none !important;
+          }
         }
       `}</style>
     </>
