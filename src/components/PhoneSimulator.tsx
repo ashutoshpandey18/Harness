@@ -58,7 +58,7 @@ export const chatScenarios: Record<string, Scenario> = {
   },
   new_worker: {
     input: "Hi",
-    reply: "Namaste! Harness.ai mein aapka swagat hai. Aapka naam kya hai?",
+    reply: "Namaste! MAGS.ai mein aapka swagat hai. Aapka naam kya hai?",
     reasoning: [
       { text: "Observe: WhatsApp message received: 'Hi' from +919999888777", delay: 300 },
       { text: "Database Query: Fetching profile details... Result: No worker record found for this number.", delay: 600 },
@@ -141,12 +141,14 @@ interface PhoneSimulatorProps {
   onShowSpeechBubbles?: () => void;
   onTraceUpdate?: (steps: string[]) => void;
   isDashboardDocked?: boolean;
+  confidenceThreshold?: number;
 }
 
 export default function PhoneSimulator({
   onShowSpeechBubbles,
   onTraceUpdate,
-  isDashboardDocked = false
+  isDashboardDocked = false,
+  confidenceThreshold = 0.75
 }: PhoneSimulatorProps) {
   // Simulator State variables
   const [isPowered, setIsPowered] = useState<"off" | "booting" | "on">("off");
@@ -163,6 +165,67 @@ export default function PhoneSimulator({
   const traceStepsRef = useRef<string[]>([]);
   const chatBodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Helper to call live RAG backend endpoint
+  const fetchChat = async (text: string) => {
+    try {
+      let phoneNum = "+919876543210";
+      if (channel === "sms") phoneNum = "+15550199";
+      if (channel === "line") phoneNum = "+84901234567";
+
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text,
+          phone: phoneNum,
+          confidenceThreshold
+        })
+      });
+      if (!res.ok) throw new Error("API failed");
+      return await res.json();
+    } catch (e) {
+      console.warn("Offline fallback in simulator:", e);
+      return null;
+    }
+  };
+
+  // Fetch active thread history from database
+  const loadActiveThread = async (ch: "whatsapp" | "sms" | "line") => {
+    try {
+      const res = await fetch("/api/conversations");
+      if (!res.ok) throw new Error("API failed");
+      const list = await res.json();
+      let phoneNum = "+919876543210";
+      if (ch === "sms") phoneNum = "+15550199";
+      if (ch === "line") phoneNum = "+84901234567";
+
+      const activeConv = list.find((c: any) => c.phone === phoneNum && c.channel === ch);
+      if (activeConv && activeConv.messages && activeConv.messages.length > 0) {
+        const mapped = activeConv.messages.map((m: any) => ({
+          type: m.sender === "Worker" ? "in" : "out",
+          text: m.text,
+          time: m.time
+        }));
+        setMessages(mapped);
+
+        if (onTraceUpdate && activeConv.trace) {
+          const t = activeConv.trace;
+          traceStepsRef.current = [
+            t.Observe,
+            `Tools Called: ${t.ToolsCalled}`,
+            `DB Sync: ${t.DatabaseSync}`,
+            `Confidence Level: ${t.Confidence}`
+          ];
+          onTraceUpdate([...traceStepsRef.current]);
+        }
+        return true;
+      }
+    } catch (e) {
+      console.warn("Failed to load active thread:", e);
+    }
+    return false;
+  };
 
   // Auto-scroll messages
   useEffect(() => {
@@ -236,14 +299,18 @@ export default function PhoneSimulator({
   useEffect(() => {
     if (isDashboardDocked) {
       setIsPowered("on");
-      setMessages([
-        { type: "in", text: "Machine 4 band ho gayi, kya karein?", time: "09:01" },
-        {
-          type: "out",
-          text: "Machine 4 ke liye:<br>1. Main switch off karein<br>2. 30 sec wait karein<br>3. Reset button dabayein<br><br>SOP Section 4.2 se. Agar phir bhi na chale — supervisor ko bulayein.",
-          time: "09:01"
+      loadActiveThread("whatsapp").then(loaded => {
+        if (!loaded) {
+          setMessages([
+            { type: "in", text: "Machine 4 band ho gayi, kya karein?", time: "09:01" },
+            {
+              type: "out",
+              text: "Machine 4 ke liye:<br>1. Main switch off karein<br>2. 30 sec wait karein<br>3. Reset button dabayein<br><br>SOP Section 4.2 se. Agar phir bhi na chale — supervisor ko bulayein.",
+              time: "09:01"
+            }
+          ]);
         }
-      ]);
+      });
       return;
     }
 
@@ -311,12 +378,44 @@ export default function PhoneSimulator({
     return `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
   };
 
-  const sendSequence = (text: string) => {
+  const sendSequence = async (text: string) => {
     setInputValue("");
     setIsKeyboardVisible(false);
     
-    setMessages(prev => [...prev, { type: "in", text, time: "09:01" }]);
+    const timestamp = getTimestamp();
+    setMessages(prev => [...prev, { type: "in", text, time: timestamp }]);
+    setIsTypingIndicator(true);
 
+    traceStepsRef.current = [];
+    if (onTraceUpdate) onTraceUpdate([]);
+
+    // 1. Try calling the live backend first
+    const liveData = await fetchChat(text);
+    if (liveData) {
+      const trace = liveData.trace;
+      const steps = [
+        trace.Observe,
+        `Tools Called: ${trace.ToolsCalled}`,
+        `DB Sync: ${trace.DatabaseSync}`,
+        `Confidence Level: ${trace.Confidence}`
+      ];
+
+      steps.forEach((stepText, idx) => {
+        addTimeout(() => {
+          traceStepsRef.current.push(stepText);
+          if (onTraceUpdate) onTraceUpdate([...traceStepsRef.current]);
+        }, (idx + 1) * 350);
+      });
+
+      addTimeout(() => {
+        setIsTypingIndicator(false);
+        setMessages(prev => [...prev, { type: "out", text: liveData.text, time: timestamp }]);
+        if (onShowSpeechBubbles) onShowSpeechBubbles();
+      }, (steps.length + 1) * 350);
+      return;
+    }
+
+    // 2. Offline Fallback
     addTimeout(() => {
       traceStepsRef.current = [];
       const addTraceLine = (stepText: string) => {
@@ -334,17 +433,13 @@ export default function PhoneSimulator({
     }, 300);
 
     addTimeout(() => {
-      setIsTypingIndicator(true);
-    }, 800);
-
-    addTimeout(() => {
       setIsTypingIndicator(false);
       setMessages(prev => [
         ...prev,
         {
           type: "out",
           text: "Machine 4 ke liye:<br>1. Main switch off karein<br>2. 30 sec wait karein<br>3. Reset button dabayein<br><br>SOP Section 4.2 se. Agar phir bhi na chale — supervisor ko bulayein.",
-          time: "09:01"
+          time: timestamp
         }
       ]);
 
@@ -354,7 +449,7 @@ export default function PhoneSimulator({
     }, 3300);
   };
 
-  const handleChannelSwitch = (ch: "whatsapp" | "sms" | "line") => {
+  const handleChannelSwitch = async (ch: "whatsapp" | "sms" | "line") => {
     clearAllTimers();
     setChannel(ch);
     let defaultLang: "hi" | "en" | "es" | "vi" = "hi";
@@ -366,6 +461,10 @@ export default function PhoneSimulator({
     
     traceStepsRef.current = [];
     if (onTraceUpdate) onTraceUpdate([]);
+
+    // Try loading actual conversation thread from DB first
+    const loaded = await loadActiveThread(ch);
+    if (loaded) return;
 
     if (ch === "sms") {
       setMessages([
@@ -423,12 +522,45 @@ export default function PhoneSimulator({
     }, finalDelay);
   };
 
-  const handleCustomSubmit = () => {
+  const handleCustomSubmit = async () => {
     const text = inputValue.trim();
     if (!text) return;
 
     clearAllTimers();
+    setInputValue("");
+    const timestamp = getTimestamp();
+    setMessages(prev => [...prev, { type: "in", text, time: timestamp }]);
+    setIsTypingIndicator(true);
 
+    traceStepsRef.current = [];
+    if (onTraceUpdate) onTraceUpdate([]);
+
+    // 1. Try calling the live backend first
+    const liveData = await fetchChat(text);
+    if (liveData) {
+      const trace = liveData.trace;
+      const steps = [
+        trace.Observe,
+        `Tools Called: ${trace.ToolsCalled}`,
+        `DB Sync: ${trace.DatabaseSync}`,
+        `Confidence Level: ${trace.Confidence}`
+      ];
+
+      steps.forEach((stepText, idx) => {
+        addTimeout(() => {
+          traceStepsRef.current.push(stepText);
+          if (onTraceUpdate) onTraceUpdate([...traceStepsRef.current]);
+        }, (idx + 1) * 350);
+      });
+
+      addTimeout(() => {
+        setIsTypingIndicator(false);
+        setMessages(prev => [...prev, { type: "out", text: liveData.text, time: timestamp }]);
+      }, (steps.length + 1) * 350);
+      return;
+    }
+
+    // 2. Offline Fallback for matched scenarios
     const cleanText = text.toLowerCase();
     let matchedScenario: string | null = null;
     if (cleanText.includes("helmet") || cleanText.includes("safety") || cleanText.includes("sir")) {
@@ -442,17 +574,25 @@ export default function PhoneSimulator({
     }
 
     if (matchedScenario) {
-      handleRunScenario(matchedScenario);
-      return;
+      const scenario = chatScenarios[matchedScenario];
+      if (scenario) {
+        scenario.reasoning.forEach(step => {
+          addTimeout(() => {
+            traceStepsRef.current.push(step.text);
+            if (onTraceUpdate) onTraceUpdate([...traceStepsRef.current]);
+          }, step.delay);
+        });
+
+        const finalDelay = scenario.reasoning[scenario.reasoning.length - 1].delay + 400;
+        addTimeout(() => {
+          setIsTypingIndicator(false);
+          setMessages(prev => [...prev, { type: "out", text: scenario.reply, time: timestamp }]);
+        }, finalDelay);
+        return;
+      }
     }
 
-    setMessages(prev => [...prev, { type: "in", text, time: getTimestamp() }]);
-    setInputValue("");
-    setIsTypingIndicator(true);
-
-    traceStepsRef.current = [];
-    if (onTraceUpdate) onTraceUpdate([]);
-
+    // 3. Fallback for completely random queries (offline mock)
     const customSteps = [
       `Observe: Received text: '${text}' on channel: ${channel}`,
       "Redis Cache: Checked last message context...",
@@ -476,7 +616,7 @@ export default function PhoneSimulator({
       if (lang === "en") replyStr = "I couldn't find matches for this. I have routed your query to the duty supervisor.";
       if (lang === "es") replyStr = "No pude encontrar coincidencias. He transferido su consulta al supervisor.";
       if (lang === "vi") replyStr = "Tôi không tìm thấy thông tin này. Đã chuyển tiếp câu hỏi tới giám sát viên.";
-      setMessages(prev => [...prev, { type: "out", text: replyStr, time: getTimestamp() }]);
+      setMessages(prev => [...prev, { type: "out", text: replyStr, time: timestamp }]);
     }, 2800);
   };
 
@@ -560,7 +700,7 @@ export default function PhoneSimulator({
       };
     } else {
       return {
-        name: "Harness.ai Agent",
+        name: "MAGS.ai Agent",
         status: "online",
         avatar: "HR"
       };
@@ -623,7 +763,7 @@ export default function PhoneSimulator({
                 <path d="M5 4v16M19 4v16M5 12h14" />
                 <circle cx="12" cy="12" r="3.5" fill="#000" stroke="var(--orange)" strokeWidth="3" />
               </svg>
-              <span>Harness<b>.ai</b></span>
+              <span>MAGS<b>.ai</b></span>
             </div>
             <div className="boot-loader"></div>
           </div>

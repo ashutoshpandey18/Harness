@@ -13,8 +13,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Harness.ai — Frontline AI Platform",
-  description: "Harness.ai is an agentic WhatsApp AI for India's 500M frontline factory workers. Upload SOPs, ask in Hindi, and trigger autonomous actions.",
+  title: "MAGS.ai — Frontline AI Platform",
+  description: "MAGS.ai is an agentic WhatsApp AI for India's 500M frontline factory workers. Upload SOPs, ask in Hindi, and trigger autonomous actions.",
 };
 
 export default function RootLayout({

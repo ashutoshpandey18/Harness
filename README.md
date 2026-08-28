@@ -1,12 +1,12 @@
-# Harness.ai — Frontline AI Platform
+# MAGS.ai — Frontline AI Platform
 
-**Harness.ai** is an agentic, multi-channel AI platform tailored for frontline industrial operations, particularly targeting India's 500M factory workers. The platform bridges the gap between complex standard operating procedures (SOPs) and workers on the shop floor via WhatsApp, Twilio SMS, and Line, enabling zero-training voice, text, and visual interactions in native languages.
+**MAGS.ai** is an agentic, multi-channel AI platform tailored for frontline industrial operations, particularly targeting India's 500M factory workers. The platform bridges the gap between complex standard operating procedures (SOPs) and workers on the shop floor via WhatsApp, Twilio SMS, and Line, enabling zero-training voice, text, and visual interactions in native languages.
 
 ---
 
 ## 🏗️ System Architecture
 
-Harness.ai runs on a Retrieval-Augmented Generation (RAG) loop featuring real-time language translation, semantic matching, automatic supervisor escalation, and incident logging.
+MAGS.ai runs on a Retrieval-Augmented Generation (RAG) loop featuring real-time language translation, semantic matching, automatic supervisor escalation, and incident logging.
 
 ```mermaid
 graph TD
@@ -26,7 +26,7 @@ graph TD
     end
 
     %% Agentic Reasoning Loop
-    subgraph AgentCore ["3. Harness Agentic Reasoning Core"]
+    subgraph AgentCore ["3. MAGS Agentic Reasoning Core"]
         Whisper --> QueryText[Standardized Query]
         Vision --> QueryText
         NLU --> QueryText
@@ -112,4 +112,4 @@ graph TD
 ---
 
 ## 📄 License
-This project is proprietary and confidential. © 2026 Harness.ai. All rights reserved.
+This project is proprietary and confidential. © 2026 MAGS.ai. All rights reserved.

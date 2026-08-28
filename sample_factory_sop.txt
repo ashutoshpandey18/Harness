@@ -1,0 +1,24 @@
+# VELVET GARMENTS FACTORY: STANDARD OPERATING PROCEDURES (SOP)
+
+## SOP Section 2.1: Safety Equipment & Access
+All personnel entering the floor must wear rubber safety boots and safety goggles. 
+- Extra safety helmets and safety goggles are kept in Store Room B near Gate 2.
+- If Store Room B is locked, backup safety gear and helmets can be retrieved from Locker 3 in the Supervisor's office.
+
+## SOP Section 4.2: Machine 4 Reset Procedure
+In the event that Machine 4 shuts down automatically and flashes a Red Error E-02 warning light, follow these reset steps:
+1. Turn off the main breaker switch at the end of Line 2.
+2. Wait exactly 30 seconds for pressure valves to cool down.
+3. Flip the main breaker switch back to ON.
+4. Press the green Reset button on the control panel.
+Caution: Do not attempt to reset more than twice. If the error persists, contact the shift supervisor immediately.
+
+## SOP Section 8.4: Keys & Supervisor Allocations
+- Keys for Store Rooms A, B, and C are kept by Supervisor Ramesh Kumar on-site.
+- During off-shift hours, backup access keys can be obtained from the Duty Coordinator at Safety Gate 2.
+
+## SOP Section 12.3: Chemical Spill & Leak Protocol (HIGH RISK)
+In the event of a chemical leak or gas spill (specifically near Aisle 4 or Aisle 5):
+1. Immediately press the emergency gas cutoff valve located next to the main exit.
+2. Alert Supervisor Ramesh Kumar immediately at safety extension line 201.
+3. Evacuate the area immediately. Do not touch or attempt to clean the spilled chemical without protective hazmat gear.

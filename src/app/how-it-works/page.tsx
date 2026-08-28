@@ -11,7 +11,7 @@ const Logo = () => (
       <circle cx="12" cy="12" r="3.5" fill="var(--bg)" stroke="var(--orange)" strokeWidth="3" />
     </svg>
     <span style={{ fontWeight: 900, fontSize: "20px", color: "var(--text)", letterSpacing: "-0.03em" }}>
-      Harness<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
+      MAGS<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
     </span>
   </span>
 );
@@ -21,15 +21,14 @@ const steps = [
     num: "01",
     label: "Upload Your Knowledge",
     heading: "Every SOP, manual, and safety binder — digitized in minutes.",
-    body: "Drop PDFs, Word docs, or paste share drive links. Harness.ai's document pipeline parses, chunks, and embeds every page into a searchable vector database. Your 40-page safety binder becomes a sub-second query.",
+    body: "Drop PDFs, Word docs, or paste share drive links. MAGS.ai's document pipeline parses, chunks, and embeds every page into a searchable vector database. Your 40-page safety binder becomes a sub-second query.",
     chips: ["PDF / Word / Drive", "Automatic chunking", "pgvector embedding", "Instant indexing"],
     visual: "upload",
   },
   {
-    num: "02",
-    label: "Workers Just Text",
-    heading: "No app download. No login. Just WhatsApp.",
-    body: "Workers save one number. They text in Hindi, Tamil, or Telugu — even send voice notes from the shop floor. Harness.ai handles multilingual input, transcribes voice via Whisper, and matches the query to your knowledge base.",
+    step: "02",
+    title: "Workers message via WhatsApp or SMS",
+    body: "Workers save one number. They text in Hindi, Tamil, or Telugu — even send voice notes from the shop floor. MAGS.ai handles multilingual input, transcribes voice via Whisper, and matches the query to your knowledge base.",
     chips: ["WhatsApp / SMS / Line", "Hindi, Tamil, Telugu, English", "Voice → Text via Whisper", "Zero training needed"],
     visual: "text",
   },
@@ -137,7 +136,7 @@ function TextVisual() {
     <div className="hiw-visual-box">
       <div className="hiw-chat-header">
         <div className="hiw-chat-dot hiw-dot-green" />
-        <span>Harness.ai · WhatsApp</span>
+        <span>MAGS.ai · WhatsApp</span>
         <span className="hiw-chat-badge">Hindi</span>
       </div>
       <div className="hiw-chat-feed">
@@ -283,7 +282,7 @@ export default function HowItWorksPage() {
           <div className="w">
             <div className="hiw-hero-eyebrow">
               <span className="pulse-dot" />
-              How Harness.ai Works
+              How MAGS.ai Works
             </div>
             <h1 className="hiw-hero-h1">
               Three steps.<br />
@@ -420,7 +419,7 @@ export default function HowItWorksPage() {
         <footer>
           <div className="w footer-container">
             <div className="f-logo"><Logo /></div>
-            <div className="f-copy">© 2026 Harness.ai. All rights reserved. Confidential.</div>
+            <div className="f-copy">© 2026 MAGS.ai. All rights reserved. Confidential.</div>
           </div>
         </footer>
       </main>

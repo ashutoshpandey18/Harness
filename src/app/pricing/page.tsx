@@ -11,7 +11,7 @@ const Logo = () => (
       <circle cx="12" cy="12" r="3.5" fill="var(--bg)" stroke="var(--orange)" strokeWidth="3" />
     </svg>
     <span style={{ fontWeight: 900, fontSize: "20px", color: "var(--text)", letterSpacing: "-0.03em" }}>
-      Harness<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
+      MAGS<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
     </span>
   </span>
 );
@@ -49,14 +49,14 @@ const faqs = [
   },
   {
     q: "What if a worker asks something we haven't documented?",
-    a: "Harness.ai's agent detects low-confidence answers and automatically routes the query to your designated supervisor. The query is also flagged in the admin dashboard so you can add it to your knowledge base."
+    a: "MAGS.ai's agent detects low-confidence answers and automatically routes the query to your designated supervisor. The query is also flagged in the admin dashboard so you can add it to your knowledge base."
   },
   {
     q: "Is there a limit on the number of SOPs or document pages?",
     a: "Starter handles up to 500 pages. Growth is unlimited. Enterprise includes multi-factory knowledge bases with tenant isolation."
   },
   {
-    q: "What languages does Harness.ai support?",
+    q: "What languages does MAGS.ai support?",
     a: "Currently: Hindi, English, Tamil, Telugu, Marathi, Bengali, Spanish, and Vietnamese. We're adding Gujarati, Kannada, and Malayalam in Q3 2026."
   },
   {
@@ -330,7 +330,7 @@ export default function PricingPage() {
                 </div>
                 <div className="pr-billed-note">Contact us for a quote</div>
               </div>
-              <Link href="mailto:founders@harness.ai" className="pr-cta-btn pr-cta-outline">Talk to Us</Link>
+              <Link href="mailto:founders@mags.ai" className="pr-cta-btn pr-cta-outline">Talk to Us</Link>
               <ul className="pr-features-list">
                 <li>Multi-factory tenant routing</li>
                 <li>Unlimited channels + languages</li>
@@ -453,7 +453,7 @@ export default function PricingPage() {
               Upload your SOP. Share the number. Your workers are already on WhatsApp.
             </p>
             <div className="pr-final-actions">
-              <Link href="mailto:founders@harness.ai" className="btn-p" style={{ fontSize: "16px", padding: "16px 40px" }}>
+              <Link href="mailto:founders@mags.ai" className="btn-p" style={{ fontSize: "16px", padding: "16px 40px" }}>
                 Apply for a Pilot →
               </Link>
               <Link href="/how-it-works" className="btn-g">
@@ -469,7 +469,7 @@ export default function PricingPage() {
         <footer>
           <div className="w footer-container">
             <div className="f-logo"><Logo /></div>
-            <div className="f-copy">© 2026 Harness.ai. All rights reserved. Confidential.</div>
+            <div className="f-copy">© 2026 MAGS.ai. All rights reserved. Confidential.</div>
           </div>
         </footer>
       </main>

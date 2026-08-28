@@ -1,0 +1,704 @@
+{
+  "workers": [
+    {
+      "id": "w-01",
+      "phone": "+919876543210",
+      "name": "Ramesh Kumar",
+      "language": "hi",
+      "department": "Production",
+      "active": "5 mins ago"
+    },
+    {
+      "id": "w-02",
+      "phone": "+919922334455",
+      "name": "Rajesh Kumar",
+      "language": "hi",
+      "department": "Spinning Floor",
+      "active": "10 mins ago"
+    },
+    {
+      "id": "w-03",
+      "phone": "+919811223344",
+      "name": "Suresh Patil",
+      "language": "mr",
+      "department": "Warehouse A",
+      "active": "1 hour ago"
+    },
+    {
+      "id": "w-04",
+      "phone": "+918811223355",
+      "name": "Anil Sharma",
+      "language": "hi",
+      "department": "Production",
+      "active": "Yesterday"
+    },
+    {
+      "id": "w-07380",
+      "phone": "8989890000",
+      "name": "Phoolsingh",
+      "language": "hi",
+      "department": "Warehouse A",
+      "active": "Just added"
+    },
+    {
+      "id": "w-08623",
+      "phone": "6387035288",
+      "name": "Rakesh Agarwal",
+      "language": "en",
+      "department": "Production",
+      "active": "Just added"
+    },
+    {
+      "id": "w-01523",
+      "phone": "1234567810",
+      "name": "uday",
+      "language": "hi",
+      "department": "Production",
+      "active": "Just added"
+    },
+    {
+      "id": "w-06124",
+      "phone": "3443566578",
+      "name": "Uday bhai",
+      "language": "en",
+      "department": "Production",
+      "active": "Just added"
+    },
+    {
+      "id": "w-00422",
+      "phone": "8998766729",
+      "name": "hero bhai",
+      "language": "hi",
+      "department": "Spinning Floor",
+      "active": "Just added"
+    },
+    {
+      "id": "w-04967",
+      "phone": "6387035288",
+      "name": "Ashutosh Pandey",
+      "language": "en",
+      "department": "Production",
+      "active": "Just added"
+    },
+    {
+      "id": "w-08679",
+      "phone": "6387035288",
+      "name": "Ashutosh",
+      "language": "hi",
+      "department": "Production",
+      "active": "Just added"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "inc-01",
+      "worker": "Ramesh Kumar",
+      "description": "Smoke observed on line 2 main breaker",
+      "severity": "HIGH",
+      "status": "Resolved",
+      "time": "09:03 AM"
+    },
+    {
+      "id": "inc-02",
+      "worker": "Suresh Patil",
+      "description": "Forklift hydraulic line leakage near Gate 2",
+      "severity": "MEDIUM",
+      "status": "in_progress",
+      "time": "Yesterday"
+    },
+    {
+      "id": "inc-00054",
+      "worker": "Ramesh Kumar",
+      "description": "Chemical spill in aisle 4!",
+      "severity": "HIGH",
+      "status": "Resolved",
+      "time": "01:54 PM"
+    }
+  ],
+  "documents": [
+    {
+      "name": "SOP_Fire_Emergency_Safety.pdf",
+      "status": "Active",
+      "chunks": 3,
+      "date": "2026-06-12"
+    },
+    {
+      "name": "SOP_Machine4_Troubleshooting.docx",
+      "status": "Active",
+      "chunks": 3,
+      "date": "2026-06-15"
+    },
+    {
+      "name": "sample_factory_sop.txt",
+      "status": "Active",
+      "chunks": 5,
+      "date": "2026-06-28"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "ch-1",
+      "doc_name": "SOP_Fire_Emergency_Safety.pdf",
+      "content": "Fire safety regulations state that in case of fire or smoke on Line 2, immediately turn off the main gas valve. Alert supervisor Ramesh Kumar and evacuate the zone immediately. Fire extinguishers are located near Gate 2."
+    },
+    {
+      "id": "ch-2",
+      "doc_name": "SOP_Fire_Emergency_Safety.pdf",
+      "content": "For safety helmets, workers can check Store Room B near Gate 2. Supervisor Ramesh keeps extra safety goggles and helmets in Locker 3."
+    },
+    {
+      "id": "ch-3",
+      "doc_name": "SOP_Machine4_Troubleshooting.docx",
+      "content": "To reset Machine 4: If Error E-02 red light turns on, switch off the breaker completely. Wait 30 seconds. Turn breaker on and press the green Reset button."
+    },
+    {
+      "id": "ch-1782682648420-0",
+      "doc_name": "sample_factory_sop.txt",
+      "content": "# VELVET GARMENTS FACTORY: STANDARD OPERATING PROCEDURES (SOP)"
+    },
+    {
+      "id": "ch-1782682648420-1",
+      "doc_name": "sample_factory_sop.txt",
+      "content": "## SOP Section 2.1: Safety Equipment & Access\nAll personnel entering the floor must wear rubber safety boots and safety goggles. \n- Extra safety helmets and safety goggles are kept in Store Room B near Gate 2.\n- If Store Room B is locked, backup safety gear and helmets can be retrieved from Locker 3 in the Supervisor's office."
+    },
+    {
+      "id": "ch-1782682648420-2",
+      "doc_name": "sample_factory_sop.txt",
+      "content": "## SOP Section 4.2: Machine 4 Reset Procedure\nIn the event that Machine 4 shuts down automatically and flashes a Red Error E-02 warning light, follow these reset steps:\n1. Turn off the main breaker switch at the end of Line 2.\n2. Wait exactly 30 seconds for pressure valves to cool down.\n3. Flip the main breaker switch back to ON.\n4. Press the green Reset button on the control panel.\nCaution: Do not attempt to reset more than twice. If the error persists, contact the shift supervisor immediately."
+    },
+    {
+      "id": "ch-1782682648420-3",
+      "doc_name": "sample_factory_sop.txt",
+      "content": "## SOP Section 8.4: Keys & Supervisor Allocations\n- Keys for Store Rooms A, B, and C are kept by Supervisor Ramesh Kumar on-site.\n- During off-shift hours, backup access keys can be obtained from the Duty Coordinator at Safety Gate 2."
+    },
+    {
+      "id": "ch-1782682648420-4",
+      "doc_name": "sample_factory_sop.txt",
+      "content": "## SOP Section 12.3: Chemical Spill & Leak Protocol (HIGH RISK)\nIn the event of a chemical leak or gas spill (specifically near Aisle 4 or Aisle 5):\n1. Immediately press the emergency gas cutoff valve located next to the main exit.\n2. Alert Supervisor Ramesh Kumar immediately at safety extension line 201.\n3. Evacuate the area immediately. Do not touch or attempt to clean the spilled chemical without protective hazmat gear."
+    }
+  ],
+  "unanswered": [
+    {
+      "id": "un-01",
+      "question": "Store Room keys kis supervisor ke paas hain?",
+      "asked_count": 5,
+      "cluster_topic": "Keys & Access",
+      "resolved": false
+    },
+    {
+      "id": "un-02",
+      "question": "Line 2 reset alarm kaise silience karein?",
+      "asked_count": 3,
+      "cluster_topic": "Alarm controls",
+      "resolved": false
+    },
+    {
+      "id": "un-01782682446851",
+      "question": "heyy",
+      "asked_count": 1,
+      "cluster_topic": "Uncategorized",
+      "resolved": false
+    },
+    {
+      "id": "un-01782682879135",
+      "question": "Canteen mein lunch ka time kya hai?",
+      "asked_count": 1,
+      "cluster_topic": "Uncategorized",
+      "resolved": false
+    },
+    {
+      "id": "un-01782995024749",
+      "question": "hey",
+      "asked_count": 1,
+      "cluster_topic": "Uncategorized",
+      "resolved": false
+    }
+  ],
+  "conversations": [
+    {
+      "id": "c-01",
+      "phone": "+919876543210",
+      "channel": "whatsapp",
+      "snippet": "अगर मशीन 4 बंद हो गई है और **लाल एरर E-0...",
+      "messages": [
+        {
+          "sender": "Worker",
+          "text": "yahan pe line 2 mein smoke aa raha hai jaldi aao",
+          "time": "09:03 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "[EMERGENCY ALERT] Line 2 mein aag/smoke detect kiya gaya hai. Main gas valve band karein. Supervisor Ramesh ji ko notify kar diya gaya hai.",
+          "time": "09:03 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "01:48 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "[Mock Response due to API Error]: I detected your request. Please check that your API key is active.",
+          "time": "01:48 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "01:50 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02** red light jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah se band kar dein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein.**\n4.  **Green Reset button dabayein.**",
+          "time": "01:50 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Safety helmet kahan milega?",
+          "time": "01:53 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Safety helmet **Store Room B near Gate 2** mein milega. Supervisor Ramesh ke paas bhi extra safety helmet **Locker 3** mein hain.",
+          "time": "01:53 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Chemical spill in aisle 4!",
+          "time": "01:53 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "[EMERGENCY ALERT] Safety incident logged. Main line breaker and auxiliary valves should be shut off. Supervisor has been notified and is on their way. Please evacuate immediately.",
+          "time": "01:53 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "01:57 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02** red light jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah band kar dein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein** aur **green Reset button dabayein.**",
+          "time": "01:57 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "01:58 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah se band kar dein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein** aur **green Reset button dabayein.**",
+          "time": "01:58 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:03 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah se band karein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko on karein.**\n4.  **Green Reset button dabayein.**",
+          "time": "02:03 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:23 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah se band karein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein.**\n4.  **Green Reset button dabayein.**",
+          "time": "02:23 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:24 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah se band kar dein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein** aur **green Reset button dabayein.**",
+          "time": "02:24 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:31 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n1. **Breaker ko poori tarah band kar dein.**\n2. **30 seconds tak wait karein.**\n3. **Breaker ko on karein.**\n4. **Green Reset button dabayein.**",
+          "time": "02:31 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:33 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Error E-02 red light** jal rahi hai, toh:\n\n1.  **Breaker ko poori tarah band kar dein.**\n2.  **30 seconds tak intezaar karein.**\n3.  **Breaker ko chalu karein.**\n4.  **Green Reset button dabayein.**",
+          "time": "02:33 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:54 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, toh yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves cool ho sakein.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, toh turant shift supervisor se contact karein.",
+          "time": "02:54 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "02:54 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, toh yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves thande ho jaayen.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, toh turant shift supervisor se contact karein.",
+          "time": "02:54 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "04:13 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, to yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** pressure valves ko cool hone ke liye.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi aata hai, to turant shift supervisor se contact karein.",
+          "time": "04:13 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "04:14 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "अगर मशीन 4 बंद हो गई है और **लाल एरर E-02** लाइट चमक रही है, तो इन चरणों का पालन करें:\n\n1.  लाइन 2 के अंत में **मुख्य ब्रेकर स्विच बंद करें**।\n2.  दबाव वाल्वों को ठंडा होने के लिए **ठीक 30 सेकंड प्रतीक्षा करें**।\n3.  मुख्य ब्रेकर स्विच को वापस **चालू करें**।\n4.  कंट्रोल पैनल पर **हरे रीसेट बटन को दबाएं**।\n\n**सावधानी**: दो बार से अधिक रीसेट करने का प्रयास न करें। यदि त्रुटि बनी रहती है, तो तुरंत शिफ्ट सुपरवाइजर से संपर्क करें।",
+          "time": "04:14 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "04:14 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, toh yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves cool ho sakein.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, toh turant shift supervisor se contact karein.",
+          "time": "04:14 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "04:16 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, to yeh steps follow karein:\n\n1.  Line 2 ke end par **main breaker switch ko off karein**.\n2.  **Theek 30 seconds** tak wait karein.\n3.  **Main breaker switch ko ON karein**.\n4.  Control panel par **green Reset button dabayein**.\n\n**Savdhani**: Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, to turant shift supervisor se contact karein.",
+          "time": "04:16 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "04:16 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, toh yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves cool ho sakein.\n3.  **Main breaker switch ko ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, toh turant shift supervisor se contact karein.",
+          "time": "04:16 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "05:22 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, toh yeh steps follow karein:\n\n1.  **Line 2 ke end mein main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves thande ho jaayen.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi theek nahi hota hai, toh turant shift supervisor se contact karein.",
+          "time": "05:22 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "03:05 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Agar Machine 4 band ho gayi hai aur **Red Error E-02** warning light flash kar rahi hai, to yeh steps follow karein:\n\n1.  **Line 2 ke end par main breaker switch ko band karein.**\n2.  **Theek 30 seconds tak wait karein** taaki pressure valves cool ho sakein.\n3.  **Main breaker switch ko wapas ON karein.**\n4.  **Control panel par green Reset button dabayein.**\n\n**Savdhani:** Do baar se zyada reset karne ki koshish na karein. Agar error phir bhi rehta hai, to turant shift supervisor se contact karein.",
+          "time": "03:05 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Where is the safety helmet?",
+          "time": "09:32 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Extra safety helmets are kept in **Store Room B near Gate 2**. If Store Room B is locked, backup safety helmets can be retrieved from **Locker 3 in the Supervisor's office**.",
+          "time": "09:32 AM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "12:08 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "अगर मशीन 4 बंद हो गई है और **लाल एरर E-02 चेतावनी लाइट** चमक रही है, तो इन चरणों का पालन करें:\n\n1.  लाइन 2 के अंत में **मुख्य ब्रेकर स्विच बंद करें**।\n2.  दबाव वाल्वों को ठंडा होने के लिए **ठीक 30 सेकंड प्रतीक्षा करें**।\n3.  मुख्य ब्रेकर स्विच को वापस **चालू करें**।\n4.  कंट्रोल पैनल पर **हरे रीसेट बटन को दबाएं**।\n\n**सावधानी**: दो बार से अधिक रीसेट करने का प्रयास न करें। यदि त्रुटि बनी रहती है, तो तुरंत शिफ्ट सुपरवाइजर से संपर्क करें।",
+          "time": "12:08 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Machine 4 band ho gayi, kya karein?",
+          "time": "11:56 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "अगर मशीन 4 बंद हो गई है और **लाल एरर E-02** चेतावनी लाइट चमक रही है, तो इन चरणों का पालन करें:\n\n1.  लाइन 2 के अंत में **मुख्य ब्रेकर स्विच बंद करें**।\n2.  दबाव वाल्वों को ठंडा होने के लिए **ठीक 30 सेकंड प्रतीक्षा करें**।\n3.  मुख्य ब्रेकर स्विच को वापस **चालू करें**।\n4.  कंट्रोल पैनल पर **हरे रीसेट बटन को दबाएँ**।\n\n**सावधानी**: दो बार से अधिक रीसेट करने का प्रयास न करें। यदि त्रुटि बनी रहती है, तो तुरंत शिफ्ट सुपरवाइजर से संपर्क करें।",
+          "time": "11:56 AM"
+        }
+      ],
+      "trace": {
+        "Observe": "Worker query: \"Machine 4 band ho gayi, kya karein?\"",
+        "ToolsCalled": "search_knowledge_base()",
+        "Confidence": 0.95,
+        "DatabaseSync": "Loaded 2 chunks from database. Matched context source: sample_factory_sop.txt",
+        "MatchedChunks": [
+          {
+            "doc": "sample_factory_sop.txt",
+            "text": "## SOP Section 4.2: Machine 4 Reset Procedure\nIn the event that Machine 4 shuts down automatically and flashes a Red Error E-02 warning light, follow these reset steps:\n1. Turn off the main breaker switch at the end of Line 2.\n2. Wait exactly 30 seconds for pressure valves to cool down.\n3. Flip the main breaker switch back to ON.\n4. Press the green Reset button on the control panel.\nCaution: Do not attempt to reset more than twice. If the error persists, contact the shift supervisor immediately.",
+            "score": 0.95
+          },
+          {
+            "doc": "SOP_Machine4_Troubleshooting.docx",
+            "text": "To reset Machine 4: If Error E-02 red light turns on, switch off the breaker completely. Wait 30 seconds. Turn breaker on and press the green Reset button.",
+            "score": 0.6
+          }
+        ],
+        "Prompt": "System: [MAGS.ai System Rules & Context]\nUser: Machine 4 band ho gayi, kya karein?"
+      }
+    },
+    {
+      "id": "c-02",
+      "phone": "+919922334455",
+      "channel": "whatsapp",
+      "snippet": "Safety helmet kahan milega?",
+      "messages": [
+        {
+          "sender": "Worker",
+          "text": "Safety helmet kahan milega?",
+          "time": "09:01 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Store Room B mein — Gate 2 ke paas. Supervisor Ramesh ji ke paas extra hain. (SOP Sec 2.1)",
+          "time": "09:01 AM"
+        }
+      ],
+      "trace": {
+        "Observe": "Worker query: 'safety helmet'",
+        "ToolsCalled": "search_knowledge_base()",
+        "Confidence": 0.96,
+        "DatabaseSync": "Cache query hit"
+      }
+    },
+    {
+      "id": "c-01782681929060",
+      "phone": "6387035288",
+      "channel": "whatsapp",
+      "snippet": "I'm sorry, I couldn't find a high-confid...",
+      "messages": [
+        {
+          "sender": "Worker",
+          "text": "machine is not running",
+          "time": "02:25 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I need more information. What is the specific error message or indicator you are seeing?",
+          "time": "02:25 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "buttons are not working",
+          "time": "02:25 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I'm sorry, I can only answer questions based on the provided SOP context. The SOP does not contain information about buttons not working.",
+          "time": "02:25 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "ohk so how i can operate this",
+          "time": "02:26 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I can only answer questions based on the provided SOP. The SOP does not contain information on how to operate equipment. Please ask a question related to safety helmets or goggles.",
+          "time": "02:26 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "hes a Red Error E-02 warning light, follow these reset steps: 1. ",
+          "time": "02:28 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "If you see a **Red Error E-02** light, you need to **switch off the breaker completely**. Then, **wait 30 seconds**. After that, **turn the breaker on** and **press the green Reset button**.",
+          "time": "02:28 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Turn off the main breaker switch at the end of Line 2.",
+          "time": "02:29 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I cannot provide instructions for turning off the main breaker switch at the end of Line 2. The provided SOP only mentions switching off the breaker for **Machine 4** if Error E-02 red light turns on.",
+          "time": "02:29 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "1. Immediately press the emergency gas cutoff valve located next to the main exit.",
+          "time": "02:31 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I cannot confirm this instruction based on the provided SOP. The SOP states that in case of fire or smoke on Line 2, you should **immediately turn off the main gas valve**. It does not mention an \"emergency gas cutoff valve located next to the main exit.\"",
+          "time": "02:31 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "hey",
+          "time": "05:23 AM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I'm sorry, I couldn't find a high-confidence answer in our current Standard Operating Procedures. I have logged your query in the supervisor pool so they can update my manual records. (Confidence: 0)",
+          "time": "05:23 AM"
+        }
+      ],
+      "trace": {
+        "Observe": "Query below threshold: \"hey\"",
+        "ToolsCalled": "log_unanswered_pool()",
+        "Confidence": 0,
+        "DatabaseSync": "Query added to unanswered queries ledger",
+        "MatchedChunks": [],
+        "Prompt": "Low confidence threshold escalation. Score 0 < 0.75."
+      }
+    },
+    {
+      "id": "c-01782682446612",
+      "phone": "1234567810",
+      "channel": "whatsapp",
+      "snippet": "I'm sorry, I couldn't find a high-confid...",
+      "messages": [
+        {
+          "sender": "Worker",
+          "text": "heyy",
+          "time": "02:34 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I'm sorry, I couldn't find a high-confidence answer in our current Standard Operating Procedures. I have logged your query in the supervisor pool so they can update my manual records. (Confidence: 0)",
+          "time": "02:34 PM"
+        }
+      ],
+      "trace": {
+        "Observe": "Query below threshold: \"heyy\"",
+        "ToolsCalled": "log_unanswered_pool()",
+        "Confidence": 0,
+        "DatabaseSync": "Query added to unanswered queries ledger",
+        "MatchedChunks": [],
+        "Prompt": "Low confidence threshold escalation. Score 0 < 0.75."
+      }
+    },
+    {
+      "id": "c-01782682805105",
+      "phone": "3443566578",
+      "channel": "whatsapp",
+      "snippet": "Based on the provided SOPs, I have infor...",
+      "messages": [
+        {
+          "sender": "Worker",
+          "text": "Chemical leak in aisle 4, what do I do?",
+          "time": "02:40 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "A chemical leak in Aisle 4 is a **HIGH RISK** situation. Follow these steps:\n\n1.  **Immediately press the emergency gas cutoff valve** located next to the main exit.\n2.  **Alert Supervisor Ramesh Kumar immediately** at safety extension line **201**.\n3.  **Evacuate the area immediately.** Do not touch or attempt to clean the spilled chemical without protective hazmat gear.",
+          "time": "02:40 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Canteen mein lunch ka time kya hai?",
+          "time": "02:41 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "I'm sorry, I couldn't find a high-confidence answer in our current Standard Operating Procedures. I have logged your query in the supervisor pool so they can update my manual records. (Confidence: 0)",
+          "time": "02:41 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Ramesh sir ki shift kab khatam hogi keys chahiye thi ",
+          "time": "02:41 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "SOP ke anusaar, Ramesh Kumar ke paas Store Rooms A, B, aur C ki keys hain.\n\nAgar Ramesh Kumar shift par nahi hain, toh aap **Duty Coordinator** se **Safety Gate 2** par backup keys le sakte hain.",
+          "time": "02:41 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "achine 4 band 🛑 Error E-02 reset process?",
+          "time": "02:42 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "To reset Machine 4 when you see the **Red Error E-02** warning light:\n\n1.  **Turn off the main breaker switch** at the end of Line 2.\n2.  **Wait exactly 30 seconds**.\n3.  **Flip the main breaker switch back to ON**.\n4.  **Press the green Reset button** on the control panel.\n\n**Caution:** Do not attempt to reset more than twice. If the error persists, contact the shift supervisor immediately.",
+          "time": "02:42 PM"
+        },
+        {
+          "sender": "Worker",
+          "text": "Gas leak near line 2 smoke coming out!",
+          "time": "02:43 PM"
+        },
+        {
+          "sender": "Agent",
+          "text": "Based on the provided SOPs, I have information regarding a gas leak near Aisle 4 or Aisle 5, and fire/smoke on Line 2.\n\nFor **smoke coming out on Line 2**:\n1. Immediately **turn off the main gas valve**.\n2. **Alert Supervisor Ramesh Kumar**.\n3. **Evacuate the zone immediately**.\n\nThe SOP for a gas leak specifies actions for a leak near Aisle 4 or Aisle 5. It does not specify actions for a gas leak near Line 2.",
+          "time": "02:43 PM"
+        }
+      ],
+      "trace": {
+        "Observe": "Worker query: \"Gas leak near line 2 smoke coming out!\"",
+        "ToolsCalled": "search_knowledge_base()",
+        "Confidence": 0.95,
+        "DatabaseSync": "Loaded 5 chunks from database. Matched context source: sample_factory_sop.txt",
+        "MatchedChunks": [
+          {
+            "doc": "sample_factory_sop.txt",
+            "text": "## SOP Section 12.3: Chemical Spill & Leak Protocol (HIGH RISK)\nIn the event of a chemical leak or gas spill (specifically near Aisle 4 or Aisle 5):\n1. Immediately press the emergency gas cutoff valve located next to the main exit.\n2. Alert Supervisor Ramesh Kumar immediately at safety extension line 201.\n3. Evacuate the area immediately. Do not touch or attempt to clean the spilled chemical without protective hazmat gear.",
+            "score": 0.95
+          },
+          {
+            "doc": "SOP_Fire_Emergency_Safety.pdf",
+            "text": "Fire safety regulations state that in case of fire or smoke on Line 2, immediately turn off the main gas valve. Alert supervisor Ramesh Kumar and evacuate the zone immediately. Fire extinguishers are located near Gate 2.",
+            "score": 0.68
+          },
+          {
+            "doc": "SOP_Fire_Emergency_Safety.pdf",
+            "text": "For safety helmets, workers can check Store Room B near Gate 2. Supervisor Ramesh keeps extra safety goggles and helmets in Locker 3.",
+            "score": 0.15
+          }
+        ],
+        "Prompt": "System: [Harness.ai System Rules & Context]\nUser: Gas leak near line 2 smoke coming out!"
+      }
+    }
+  ]
+}

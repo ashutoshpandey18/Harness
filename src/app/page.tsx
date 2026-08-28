@@ -12,7 +12,7 @@ const Logo = () => (
       <circle cx="12" cy="12" r="3.5" fill="var(--bg)" stroke="var(--orange)" strokeWidth="3" />
     </svg>
     <span style={{ fontWeight: 900, fontSize: "20px", color: "var(--text)", letterSpacing: "-0.03em" }}>
-      Harness<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
+      MAGS<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
     </span>
   </span>
 );
@@ -225,7 +225,7 @@ const USE_CASES = [
     tag: "Onboarding", 
     icon: <SvgUserPlus width="18" height="18" />, 
     q: "Hi",                               
-    a: "Namaste! Harness.ai mein aapka swagat hai. Aapka naam kya hai?",
+    a: "Namaste! MAGS.ai mein aapka swagat hai. Aapka naam kya hai?",
     log: "New worker greeting registered. Triggering onboarding sequence.",
     bg: "#EFF6FF", 
     border: "#93C5FD" 
@@ -476,7 +476,7 @@ export default function LandingPage() {
               </h1>
 
               <p className="lp-hero-sub">
-                Harness.ai is an agentic AI assistant for India's factory workers.
+                MAGS.ai is an agentic AI assistant for India's factory workers.
                 Ask in Hindi via WhatsApp. Get a verified SOP answer in under 4 seconds.
                 No app. No login. No training.
               </p>
@@ -621,7 +621,7 @@ export default function LandingPage() {
 
               <div className="prob-arrow-down">
                 <div className="pad-line" />
-                <div className="pad-label">Harness.ai absorbs all of this →</div>
+                <div className="pad-label">MAGS.ai absorbs all of this →</div>
               </div>
             </div>
           </div>
@@ -638,7 +638,7 @@ export default function LandingPage() {
                 One AI node. Every worker. Every question.
               </h2>
               <p className="sec-sub" style={{ maxWidth: "520px" }}>
-                Harness.ai sits between your knowledge base and your workforce — handling everything autonomously, in real-time.
+                MAGS.ai sits between your knowledge base and your workforce — handling everything autonomously, in real-time.
               </p>
             </div>
 
@@ -688,7 +688,7 @@ export default function LandingPage() {
                 <div className="brain-ring br-2" />
                 <div className="brain-core">
                   <SvgBrain style={{ color: "#fff" }} />
-                  <div className="bc-name">Harness.ai</div>
+                  <div className="bc-name">MAGS.ai</div>
                   <div className="bc-sub">RAG · Agent · Multi-lingual</div>
                 </div>
               </div>
@@ -800,7 +800,7 @@ export default function LandingPage() {
             </div>
             <div className="met-quote">
               <div className="mq-rule" />
-              <p className="mq-text">"Most software is designed for people with laptops. Harness.ai was designed for people with hard hats."</p>
+              <p className="mq-text">"Most software is designed for people with laptops. MAGS.ai was designed for people with hard hats."</p>
               <div className="mq-rule" />
             </div>
           </div>
@@ -869,7 +869,7 @@ export default function LandingPage() {
               <div className="uc-chat-viewer" style={{ "--uc-border": USE_CASES[activeTab].border } as React.CSSProperties}>
                 <div className="uc-chat-header">
                   <div className="uc-ch-status" />
-                  <span>WhatsApp · Harness.ai Agent</span>
+                  <span>WhatsApp · MAGS.ai Agent</span>
                 </div>
 
                 <div className="uc-chat-messages">
@@ -1038,7 +1038,7 @@ export default function LandingPage() {
               <Link href="/pricing">Pricing</Link>
               <Link href="/dashboard">Dashboard</Link>
             </div>
-            <div className="f-copy">© 2026 Harness.ai. Confidential.</div>
+            <div className="f-copy">© 2026 MAGS.ai. Confidential.</div>
           </div>
         </footer>
       </main>

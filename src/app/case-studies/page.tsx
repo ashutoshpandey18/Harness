@@ -11,7 +11,7 @@ const Logo = () => (
       <circle cx="12" cy="12" r="3.5" fill="var(--bg)" stroke="var(--orange)" strokeWidth="3" />
     </svg>
     <span style={{ fontWeight: 900, fontSize: "20px", color: "var(--text)", letterSpacing: "-0.03em" }}>
-      Harness<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
+      MAGS<span style={{ color: "var(--orange)", fontWeight: 500 }}>.ai</span>
     </span>
   </span>
 );
@@ -27,7 +27,7 @@ const studies = [
     logoColor: "#FF5722",
     headline: "240 workers. 89% fewer supervisor interruptions. First month.",
     challenge: "Supervisors at Velvet Garments were fielding 60–80 WhatsApp messages per shift from workers asking about loom settings, thread tension specifications, and safety PPE protocols. Supervisors spent 2–3 hours daily on repeat queries instead of on the floor.",
-    solution: "Loaded 14 SOPs and machine operation manuals into Harness.ai. Workers saved the company WhatsApp number. Questions that previously required supervisor attention now get answered in Hindi in under 4 seconds.",
+    solution: "Loaded 14 SOPs and machine operation manuals into MAGS.ai. Workers saved the company WhatsApp number. Questions that previously required supervisor attention now get answered in Hindi in under 4 seconds.",
     metrics: [
       { num: "89%", label: "Fewer supervisor interruptions" },
       { num: "4.2s", label: "Avg agent response time" },
@@ -50,14 +50,13 @@ const studies = [
     logoColor: "#1D4ED8",
     headline: "Zero machine-error downtime incidents. 3 months running.",
     challenge: "Line workers on the CNC and lathe floors at AutoParts Hub were losing 30–45 minutes per machine error waiting for supervisors to provide reset procedures. The factory's SOP binder was 84 pages — workers never read it.",
-    solution: "Digitized the entire maintenance manual into Harness.ai. Workers now photo-message machine error codes and receive step-by-step Hindi reset instructions with safety prerequisites checked automatically.",
+    solution: "Digitized the entire maintenance manual into MAGS.ai. Workers now photo-message machine error codes and receive step-by-step Hindi reset instructions with safety prerequisites checked automatically.",
     metrics: [
-      { num: "0", label: "Machine downtime incidents (3 mo.)" },
-      { num: "38 min", label: "Avg wait time reduced to 4 sec" },
-      { num: "180", label: "Workers on WhatsApp + Voice" },
-      { num: "₹4.2L", label: "Estimated downtime cost saved" },
+      { num: "-41%", label: "Unplanned Machine Downtime" },
+      { num: "0", label: "Reported Safety Incidents" },
+      { num: "1.2K+", label: "Queries Resolved / Mo" },
     ],
-    quote: "\"Workers were scared to reset machines alone. Now they follow the SOP step by step because Harness.ai talks to them in their language.\"",
+    quote: "\"Workers were scared to reset machines alone. Now they follow the SOP step by step because MAGS.ai talks to them in their language.\"",
     quotePerson: "Anjali Desai, Plant Manager",
     tag: "Auto Ancillary",
     impact: "Downtime cost reduced by an estimated ₹4.2 lakh/month",
@@ -73,14 +72,13 @@ const studies = [
     logoColor: "#15803D",
     headline: "3 languages. 420 workers. One number.",
     challenge: "BuildRight's workforce spans Tamil, Telugu, and Hindi speakers across 6 construction sites. Safety compliance was near-impossible to enforce — different supervisors, different language barriers, no consistent SOP delivery.",
-    solution: "Harness.ai handles automatic language detection and responds in the worker's own language. Voice notes in Tamil are transcribed and responded to in Tamil. Safety violations are flagged and incident logs auto-generated.",
+    solution: "MAGS.ai handles automatic language detection and responds in the worker's own language. Voice notes in Tamil are transcribed and responded to in Tamil. Safety violations are flagged and incident logs auto-generated.",
     metrics: [
-      { num: "3", label: "Languages handled (Tamil, Telugu, Hindi)" },
-      { num: "100%", label: "Safety query response coverage" },
-      { num: "420", label: "Workers across 6 sites" },
-      { num: "47", label: "Safety incidents auto-logged" },
+      { num: "6", label: "Construction Sites Active" },
+      { num: "100%", label: "Tamil Voice Accuracy" },
+      { num: "< 5s", label: "Avg Resolution Time" },
     ],
-    quote: "\"We have supervisors on only 3 of the 6 sites. Harness.ai is effectively the supervisor on the other 3. It works in Tamil, which is everything for us.\"",
+    quote: "\"We have supervisors on only 3 of the 6 sites. MAGS.ai is effectively the supervisor on the other 3. It works in Tamil, which is everything for us.\"",
     quotePerson: "Senthil Kumar, HSE Manager",
     tag: "Construction",
     impact: "Safety protocol compliance up from 61% to 94%",
@@ -89,7 +87,7 @@ const studies = [
 ];
 
 const globalMetrics = [
-  { num: "840+", label: "Workers actively using Harness.ai" },
+  { num: "840+", label: "Workers actively using MAGS.ai" },
   { num: "12,400+", label: "Queries handled per month" },
   { num: "4.1s", label: "Average response latency" },
   { num: "94%", label: "First-response resolution rate" },
@@ -173,7 +171,7 @@ export default function CaseStudiesPage() {
               Real factories.<br /><em>Real numbers.</em>
             </h1>
             <p className="cs-hero-sub">
-              These aren't projections. Harness.ai is running live in Indian manufacturing plants. Here's what happened in the first 90 days.
+              These aren't projections. MAGS.ai is running live in Indian manufacturing plants. Here's what happened in the first 90 days.
             </p>
           </div>
         </section>
@@ -273,7 +271,7 @@ export default function CaseStudiesPage() {
             <div className="cs-feature-quote">
               <div className="cs-fq-mark">"</div>
               <p className="cs-fq-text">
-                Harness.ai is the only B2B SaaS I've seen that actually gets used by the people who need it most — workers on the floor, not managers in offices.
+                MAGS.ai is the only B2B SaaS I've seen that actually gets used by the people who need it most — workers on the floor, not managers in offices.
               </p>
               <div className="cs-fq-person">
                 <div className="cs-fq-avatar">YC</div>
@@ -321,7 +319,7 @@ export default function CaseStudiesPage() {
         <footer>
           <div className="w footer-container">
             <div className="f-logo"><Logo /></div>
-            <div className="f-copy">© 2026 Harness.ai. All rights reserved. Confidential.</div>
+            <div className="f-copy">© 2026 MAGS.ai. All rights reserved. Confidential.</div>
           </div>
         </footer>
       </main>
